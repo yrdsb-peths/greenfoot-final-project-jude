@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author Jude Kuo
+ * @version June 2022
  */
 public class MyWorld extends World
 {
@@ -33,8 +33,7 @@ public class MyWorld extends World
     }
     public void gameOver()
     {
-        Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel, 300 , 200);
+        Greenfoot.setWorld(new Gameover());
     }
     public void increaseScore()
     {

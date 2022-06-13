@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Flower here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Author Jude Kuo
+ * @version June 2022
  */
 public class Flower extends Actor
 {
