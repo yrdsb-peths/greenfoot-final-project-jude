@@ -2,9 +2,13 @@
 comment0.target=Bee
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bee\ here.\r\n\ \r\n\ @Author\ Jude\ Kuo\r\n\ @version\ June\ 2022\r\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Bee()
 comment2.params=
-comment2.target=void\ nectar()
+comment2.target=void\ animateBee()
 comment3.params=
-comment3.target=void\ fire()
-numComments=4
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ nectar()
+comment5.params=
+comment5.target=void\ fire()
+numComments=6

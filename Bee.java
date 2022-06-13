@@ -11,6 +11,23 @@ public class Bee extends Actor
     GreenfootSound lofi = new GreenfootSound("lofi.mp3");
     boolean space =true;
     GreenfootSound beeSound = new GreenfootSound("bee.mp3");
+    GreenfootImage[] move = new GreenfootImage[6];
+    public Bee()
+    {
+        for(int i = 0; i< move.length; i++)
+        {
+            
+            move[i] = new GreenfootImage("images/tile00" + i +".png");
+            move[i].scale(50,50);
+        }
+        setImage(move[0]);
+    }
+    int imageIndex=0;
+    public void animateBee()
+    {
+        setImage(move[imageIndex]);
+        imageIndex = (imageIndex + 1) % move.length;
+    }
     public void act()
     {
         
@@ -24,7 +41,7 @@ public class Bee extends Actor
         }
         fire();
         nectar();
-        
+        animateBee();
     }
         public void nectar()
         {
