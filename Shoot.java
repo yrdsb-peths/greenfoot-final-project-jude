@@ -15,7 +15,8 @@ public class Shoot extends Actor
     public void act()
     {
         move();
-        touch();// Add your action code here.
+        touch();
+
     }
     public void move()
     {
@@ -27,10 +28,16 @@ public class Shoot extends Actor
         Actor Flowers = getOneIntersectingObject(Flower.class);
         if (Flowers != null)
         {
+            MyWorld world = (MyWorld) getWorld();
+            world.increaseScore();
             getWorld().removeObject(Flowers);
             getWorld().removeObject(this);
+ 
+
+        }
         }
     }
+
         
         
-}
+

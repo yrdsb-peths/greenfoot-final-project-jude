@@ -31,9 +31,7 @@ public class Bee extends Actor
             {
                 removeTouching(Flower.class);
                 MyWorld world = (MyWorld) getWorld();
-                world.makeFlower();
                 world.increaseScore();
-                beeSound.play();
             }
             
             
