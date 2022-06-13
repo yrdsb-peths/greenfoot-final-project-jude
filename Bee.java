@@ -20,7 +20,7 @@ public class Bee extends Actor
         {
             move(-6);
         }
-
+        fire();
         nectar();
         
     }
@@ -37,5 +37,12 @@ public class Bee extends Actor
             
             
         }
+        public void fire()
+    {
+        if (Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject(new Shoot(),getX(), getY()-23);
+        }
+    }
     
 }
