@@ -14,10 +14,23 @@ public class Shoot extends Actor
      */
     public void act()
     {
-        move();// Add your action code here.
+        move();
+        touch();// Add your action code here.
     }
     public void move()
     {
         setLocation(getX(),getY()-5);
     }
+    public void touch()
+        {
+        
+        Actor Flowers = getOneIntersectingObject(Flower.class);
+        if (Flowers != null)
+        {
+            getWorld().removeObject(Flowers);
+            getWorld().removeObject(this);
+        }
+    }
+        
+        
 }
