@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bee extends Actor
 {
+    boolean space =true;
     GreenfootSound beeSound = new GreenfootSound("bee.mp3");
     public void act()
     {
@@ -39,10 +40,17 @@ public class Bee extends Actor
         }
         public void fire()
     {
-        if (Greenfoot.isKeyDown("space"))
+        if (Greenfoot.isKeyDown("space") && space == true)
         {
             getWorld().addObject(new Shoot(),getX(), getY()-23);
+            space = false;
         }
+        else if (!Greenfoot.isKeyDown("space"))
+        {
+            space = true;
+        }
+        
+
     }
     
 }
