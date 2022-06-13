@@ -14,6 +14,10 @@ public class Shoot extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        move();// Add your action code here.
+    }
+    public void move()
+    {
+        setLocation(getX(),getY()-5);
     }
 }
