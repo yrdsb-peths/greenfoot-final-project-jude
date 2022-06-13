@@ -14,21 +14,13 @@ public class Bee extends Actor
         
         if(Greenfoot.isKeyDown("d"))
         {
-            turn(3);
+            move(3);
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            turn(-3);
+            move(-3);
         }
-        if(Greenfoot.isKeyDown("w"))
-        {
-            move(2);
-        }
-        if(Greenfoot.isKeyDown("s"))
-        {
-            move(-1);
-        }
-        move(1);
+
         nectar();
         
     }

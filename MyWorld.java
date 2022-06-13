@@ -21,14 +21,14 @@ public class MyWorld extends World
         
         
         Bee a = new Bee();
-        addObject(a, 300, 200);
+        addObject(a, 300, 350);
         
         
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel,50, 50); 
         
         
-        makeFlower();
+        act();
 
     }
     public void gameOver()
@@ -48,9 +48,13 @@ public class MyWorld extends World
 
     public void makeFlower()
     {
-        Flower c = new Flower();
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
-        addObject(c, x, y);
+        addObject(new Flower(), Greenfoot.getRandomNumber(600), 0);
+    }
+    public void act()
+    {
+        if(Greenfoot.getRandomNumber(60)<1)
+        {
+            makeFlower();
+        }
     }
 }
