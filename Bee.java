@@ -11,33 +11,56 @@ public class Bee extends Actor
     GreenfootSound lofi = new GreenfootSound("lofi.mp3");
     boolean space =true;
     GreenfootSound beeSound = new GreenfootSound("bee.mp3");
-    GreenfootImage[] move = new GreenfootImage[6];
+    GreenfootImage[] moveRight = new GreenfootImage[6];
+    GreenfootImage[] moveLeft = new GreenfootImage[6];
+    
+    String facing ="right";
     public Bee()
     {
-        for(int i = 0; i< move.length; i++)
+        for(int i = 0; i< moveRight.length; i++)
         {
             
-            move[i] = new GreenfootImage("images/tile00" + i +".png");
-            move[i].scale(50,50);
+            moveRight[i] = new GreenfootImage("images/tile00" + i +"-removebg-preview.png");
+            moveRight[i].scale(50,50);
         }
-        setImage(move[0]);
+
+        for(int i = 0; i < moveLeft.length; i++)
+        {
+            
+            moveLeft[i] = new GreenfootImage("images/tile00" + i +"-removebg-preview.png");
+            moveLeft[i].mirrorHorizontally();
+            moveLeft[i].scale(50,50);
+            
+        }
+        
+        
     }
     int imageIndex=0;
     public void animateBee()
     {
-        setImage(move[imageIndex]);
-        imageIndex = (imageIndex + 1) % move.length;
+        if(facing.equals("right"))
+        {
+        setImage(moveRight[imageIndex]);
+        imageIndex = (imageIndex + 1) % moveRight.length;
+    }
+    else
+    {
+        setImage(moveLeft[imageIndex]);
+        imageIndex = (imageIndex + 1) % moveLeft.length;
+    }
     }
     public void act()
     {
         
         if(Greenfoot.isKeyDown("d"))
         {
-            move(3);
+            move(4);
+            facing = "left";
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-3);
+            move(-4);
+            facing = "right";
         }
         fire();
         nectar();
