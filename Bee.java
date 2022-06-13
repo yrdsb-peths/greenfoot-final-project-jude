@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bee extends Actor
 {
+    GreenfootSound lofi = new GreenfootSound("lofi.mp3");
     boolean space =true;
     GreenfootSound beeSound = new GreenfootSound("bee.mp3");
     public void act()
@@ -15,11 +16,11 @@ public class Bee extends Actor
         
         if(Greenfoot.isKeyDown("d"))
         {
-            move(6);
+            move(3);
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-6);
+            move(-3);
         }
         fire();
         nectar();
@@ -47,6 +48,11 @@ public class Bee extends Actor
         {
             space = true;
         }
+        if (1 == 1)
+        {
+            lofi.play();
+        }
+        
         
 
     }

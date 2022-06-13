@@ -29,7 +29,7 @@ public class MyWorld extends World
         
         
         act();
-
+        
     }
     public void gameOver()
     {
