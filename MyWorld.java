@@ -33,7 +33,7 @@ public class MyWorld extends World
     }
     public void gameOver()
     {
-        Greenfoot.setWorld(new Gameover());
+        Greenfoot.setWorld(new Gameover(score));
     }
     public void increaseScore()
     {
