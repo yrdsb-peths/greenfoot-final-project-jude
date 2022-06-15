@@ -13,6 +13,7 @@ public class Start extends World
     Label b = new Label("Press D to move right", 50);
     Label c = new Label("Press space to shoot",50);
     Label d = new Label("Press space to start", 50);
+    Label e = new Label("Shoot/Pick up the flowers falling down", 35);
     /**
      * Constructor for objects of class Start.
      * 
@@ -27,6 +28,7 @@ public class Start extends World
         addObject(b,300, 140);
         addObject(c,300, 180);
         addObject(d,300, 260);
+        addObject(e,300, 320);
         
         prepare();
     }
